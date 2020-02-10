@@ -1,0 +1,102 @@
+---
+title: "RMarkdown Notes"
+author: "Ou Zhang"
+date: "January 15, 2019"
+output: 
+    html_document:
+        highlight: haddock
+        theme: spacelab
+        toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r global_function}
+
+knitr::opts_chunk$set(echo = FALSE, 
+                      eval = TRUE, 
+                      collapse = TRUE,
+                      message = FALSE,
+                      warning = FALSE, 
+                      fig.path = "Figures/",
+                      fig.width = 12, 
+                      fig.height = 8,
+                      fig.aligh = "center")
+
+```
+# Reproducible reporting
+
+## Knitr Ninja from Yihui Xie
+
+* Avoid Copy + Paste  
+* Automation  
+* Dynamic documents  
+ - code + narrative = report  
+  (computing languages + authoring languages)  
+
+**************************************************
+
+## Packrat A dependency Management System for R  
+
+Packrat is an R package that helps you manage your project's R package
+  dependencies in a way that is:
+  
+  - Reproducible  
+    Records the exact package versions you depend on, and ensures those exact versions are the onece that get installed wherever you go.
+    
+  - Isolated  
+    Installing a new or updated package for one project won't break your other projects, and vice versa.  
+
+  - Portable  
+  easily transport your projects from one computer to another, even across different platforms. 
+
+### Main Packrat Verbs  
+
+  - The snapshot of your project's R dependencies  
+  
+  - The private library powering your project.  
+  
+    `**packrat::snapshot()** records the package versions used by a project and downloads the source code for storage with the project`  
+    
+    `**packrat::restore()** applies the previous snapthos to a directory`    
+    
+### bundle and unbundle packages
+
+packrat is only availabe on github.com not on cran.
+    
+
+# Interactive Reporting from Joe Chang and Garrett Grolemund
+  
+
+## Shiny: R made interactive - Joe Cheng
+
+Just some simple Shiny introduction.
+
+## Embedding Shiny Apps in R Markdown documents - Garrett Grolemund
+
+
+* Add R chunk to the markdown.
+
+### A widget for .Rmd
+
+`library(rmdexamples)`  
+`Kmeans_cluster(iris)`
+
+### The easist way to use Shiny
+
+1. Works for ggvis.
+
+
+
+
+
+
+
+
+
+  
+
+ 
